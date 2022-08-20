@@ -1,3 +1,5 @@
+import rootdir
+
 from pyalgotrade import strategy
 from pyalgotrade.barfeed import quandlfeed
 from pyalgotrade.technical import ma
@@ -26,7 +28,7 @@ class MyStrategy(strategy.BacktestingStrategy):
 
 # Load the bar feed from the CSV file
 feed = quandlfeed.Feed()
-feed.addBarsFromCSV("orcl", "./../vvothers/orclQuanDlData_short.csv")
+feed.addBarsFromCSV("orcl", "vvothers/orclQuanDlData_short.csv")
 
 # Evaluate the strategy with the feed's bars.
 myStrategy = MyStrategy(feed, "orcl")

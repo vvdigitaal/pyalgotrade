@@ -1,4 +1,5 @@
 from __future__ import print_function
+import rootdir
 
 from pyalgotrade import strategy
 from pyalgotrade.barfeed import quandlfeed
@@ -49,7 +50,7 @@ class MyStrategy(strategy.BacktestingStrategy):
 def run_strategy(smaPeriod):
     # Load the bar feed from the CSV file
     feed = quandlfeed.Feed()
-    feed.addBarsFromCSV("orcl", "./../vvothers/orclQuanDlData_short.csv")
+    feed.addBarsFromCSV("orcl", "vvothers/orclQuanDlData_short.csv")
 
     # Evaluate the strategy with the feed.
     myStrategy = MyStrategy(feed, "orcl", smaPeriod)
