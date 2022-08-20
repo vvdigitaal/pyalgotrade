@@ -1,3 +1,4 @@
+import rootdir
 from pyalgotrade import strategy
 from pyalgotrade import plotter
 from pyalgotrade.tools import quandl
